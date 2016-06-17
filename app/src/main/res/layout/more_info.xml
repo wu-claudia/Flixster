@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/ivPoster" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="The Do-Over"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="30sp"
+        android:id="@+id/tvTitle"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/tvDate"
+        android:textSize="20sp"
+        tools:text="2016-05-18"
+        android:layout_marginLeft="10dp"
+        android:textColor="#fff"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbRating"
+        android:isIndicator="true"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:stepSize="0.1"
+        android:numStars="5"
+        android:layout_marginLeft="10dp"
+        tools:rating="2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        tools:text="The life of a bank manager is turned upside down when a friend from his past manipulates him into faking his own death and taking off on an adventure."
+        android:textSize="20sp"
+        android:id="@+id/tvOverview"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:textColor="#fff" />
+</LinearLayout>
