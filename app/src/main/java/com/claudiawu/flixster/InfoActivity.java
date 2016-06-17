@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-public class InfoActivity extends AppCompatActivity{
+public class InfoActivity extends AppCompatActivity {
 
     String title;
     String overview;

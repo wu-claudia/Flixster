@@ -35,7 +35,7 @@ public class MoviesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getSupportActionBar().hide();
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_movies);
         client = new AsyncHttpClient();
         url = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
