@@ -57,6 +57,7 @@ public class MoviesActivity extends AppCompatActivity {
                 i.putExtra("rating",movie.getRating());
                 i.putExtra("release_date",movie.getRelease_date());
                 i.putExtra("backdrop",movie.getBackdropPath());
+                i.putExtra("movie_id",movie.getID());
                 startActivity(i);
             }
         });
