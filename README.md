@@ -25,9 +25,9 @@ The following additional features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/WMUfnRf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough for Portrait Mode' />
+<img src='http://imgur.com/YMkdbnc' title='Portrait Video Walkthrough' width='' alt='Video Walkthrough for Portrait Mode' />
 
-<img src='http://i.imgur.com/b0NAUdu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough for Landscape Mode' />
+<img src='http://imgur.com/5e7EIl0.gif' title='Landscape Video Walkthrough' width='' alt='Video Walkthrough for Landscape Mode' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

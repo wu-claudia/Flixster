@@ -26,7 +26,7 @@ public class VideoActivity extends YouTubeBaseActivity{
                                                         YouTubePlayer youTubePlayer, boolean b) {
 
                         // do any work here to cue video, play video, etc.
-                        youTubePlayer.cueVideo(videoKey);
+                        youTubePlayer.loadVideo(videoKey);
                     }
 
                     @Override
