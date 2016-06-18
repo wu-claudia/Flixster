@@ -2,15 +2,13 @@ package com.claudiawu.flixster;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.claudiawu.flixster.adapters.MovieArrayAdapter;
-import com.claudiawu.flixster.models.Movie;
+import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.squareup.picasso.Picasso;
@@ -19,41 +17,41 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 import cz.msebera.android.httpclient.Header;
 
-public class InfoActivity extends AppCompatActivity {
+public class InfoActivity extends YouTubeBaseActivity {
 
     String title;
     String overview;
     String backdrop;
     String release_date;
     double rating;
-    int movie_id = getIntent().getIntExtra("id",0);
+    int movie_id;
     private AsyncHttpClient client;
     private String url;
-    ArrayList<Movie> videos;
-    MovieArrayAdapter videoAdapter;
+    //ArrayList<Movie> videos;
+    //MovieArrayAdapter videoAdapter;
     ImageView backdropTrailer;
+    String video_key;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getSupportActionBar().hide();
         setContentView(R.layout.more_info);
         client = new AsyncHttpClient();
+        movie_id = getIntent().getIntExtra("id",0);
         url = "https://api.themoviedb.org/3/movie/" + movie_id + "videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
 
         backdropTrailer = (ImageView) findViewById(R.id.ivPoster);
-        videos = new ArrayList<>();
-        videoAdapter = new MovieArrayAdapter(this, videos);
+        //videos = new ArrayList<>();
+        //videoAdapter = new MovieArrayAdapter(this, videos);
 
         backdropTrailer.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Movie movie = videos;
+            public void onClick(View view) {
                 Intent i = new Intent(InfoActivity.this, VideoActivity.class);
-                i.putExtra("videoKey", getIntent().getStringExtra("video_key"));
+                i.putExtra("videoKey", video_key);
                 startActivity(i);
             }
         });
@@ -89,9 +87,11 @@ public class InfoActivity extends AppCompatActivity {
 
                 try {
                     movieJsonResults = response.getJSONArray("results");
-                    videos.clear();
-                    videos.addAll(Movie.fromJSONArray(movieJsonResults));
-                    videoAdapter.notifyDataSetChanged();
+                    JSONObject result = movieJsonResults.getJSONObject(0);
+                    video_key = result.getString("key");
+                    //videos.clear();
+                    //videos.addAll(Movie.fromJSONArray(movieJsonResults));
+                    //videoAdapter.notifyDataSetChanged();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
