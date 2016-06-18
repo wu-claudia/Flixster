@@ -37,6 +37,7 @@ Challenges:
 * Using the Movie API to get certain details about the movie, like its rating, backdrop path, and poster path, then trying to apply it in the actual page view
 * Learning how to use Picasso to load different images for when the app is in portrait or landscape mode
 * Integrating additional design features to improve some features that did not work before and overlaying new features on top of old ones for further improvement
+* Making use of the YouTubePlayerView and creating an Intent for when users click on a movie backdrop in the details page to stream its trailer from YouTube
 
 ## License
 
