@@ -3,6 +3,7 @@ package com.claudiawu.flixster;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -40,8 +41,9 @@ public class InfoActivity extends YouTubeBaseActivity {
         //getSupportActionBar().hide();
         setContentView(R.layout.more_info);
         client = new AsyncHttpClient();
-        movie_id = getIntent().getIntExtra("id",0);
-        url = "https://api.themoviedb.org/3/movie/" + movie_id + "videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
+        movie_id = getIntent().getIntExtra("movie_id",0);
+        Log.d("Movie ID: ", "" + movie_id);
+        url = "https://api.themoviedb.org/3/movie/" + movie_id + "/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
 
         backdropTrailer = (ImageView) findViewById(R.id.ivPoster);
         //videos = new ArrayList<>();
@@ -51,7 +53,7 @@ public class InfoActivity extends YouTubeBaseActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(InfoActivity.this, VideoActivity.class);
-                i.putExtra("videoKey", video_key);
+                i.putExtra("video_key", video_key);
                 startActivity(i);
             }
         });

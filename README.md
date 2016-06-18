@@ -1,11 +1,11 @@
 # Flixster
 # Pre-work - Flixster
 
-Flixster is an android app that allows users to view movies and learn about their synopses in a scrollable list. After clicking on a particular movie, users can also learn more details about a particular movie, like its release date and rating.
+Flixster is an android app that allows users to view movies and learn about their synopses in a scrollable list. After clicking on a particular movie, users can also learn more details about a particular movie, like its release date and rating, as well as access the video trailer from YouTube.
 
 Submitted by: Claudia Wu
 
-Time spent: 10 hours spent in total
+Time spent: 12 hours spent in total
 
 ## User Stories
 
@@ -19,12 +19,13 @@ The following additional features are implemented:
 * [x] User can view the movie poster in the portrait mode and the movie backdrop in the landscape mode
 * [x] Optimized list adapters for performance with the ViewHolder pattern
 * [x] Displays default image during loading
+* [x] Allows user to access the trailer for the movie from YouTube
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/oP7oe1r.gif' title='Video Walkthrough' width='' alt='Video Walkthrough for Portrait Mode' />
+<img src='http://i.imgur.com/WMUfnRf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough for Portrait Mode' />
 
 <img src='http://i.imgur.com/b0NAUdu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough for Landscape Mode' />
 

@@ -15,7 +15,6 @@ public class Movie {
     double rating;
     String release_date;
     int movie_id;
-    String video_key;
 
     public String getPosterPath() {
         return String.format("https://image.tmdb.org/t/p/w342/%s", posterPath);
